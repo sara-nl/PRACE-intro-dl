@@ -1,4 +1,4 @@
-# ELIXIR EXCELERATE Deep Learning for Life Sciences workshop
+# PRACE course: Introduction to High-Performance Machine Learning (1st day)
 To run the notebooks locally, please install [Anaconda](https://www.anaconda.com/distribution/).
 
 Create a new Python 3 environment and install the following packages:
