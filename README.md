@@ -14,7 +14,7 @@ Here "ptcXXX" is the login name that you received via email. Type in the passwor
 
 This access to Cartesius is made available for duration of the course and at most one week after its finalization.
 
-## Preparation for Hands-on session of GPU programming
+## Preparation for the hands-on sessions
 
 Login to Cartesius, clone the git repository and generate a key pair.
 
@@ -51,6 +51,8 @@ To cancel your job:
    scancel JobID
    
 If your job is running, you can open your browser and go to localhost:5XXX (replace again XXX with the three digits of your login name). You should be able to see the Jupyter notebook now.
+
+NOTE: the script job.jupyter.gpu includes a line with the reservation "ptc_course_1", which is valid only for the first day of the course. The script may be used later, but this reservation won't be valid anymore, and therefore will need to be changed or removed.
 
 ## Running the notebooks at home
 

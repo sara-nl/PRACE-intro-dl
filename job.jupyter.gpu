@@ -1,8 +1,8 @@
 #!/bin/bash
-#SBATCH -t 01:00:00
+#SBATCH -t 08:00:00
 #SBATCH -N 1
-#SBATCH -p gpu_short
-
+#SBATCH -p gpu
+#SBATCH --reservation=ptc_course_1
 
 module load Python/3.6.3-foss-2017b
 module load cuDNN/7.4.2-CUDA-10.0.130
