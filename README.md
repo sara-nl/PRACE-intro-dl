@@ -51,7 +51,12 @@ Use this command to check that your job is running:
 
     squeue –u $(whoami)
    
-After executing squeue you will see the JobID of the script ("NNNNNNN"), and if you do "ls" you may also see a new file called "slurm-NNNNNNN.out". Take this file and execute the following:
+After executing squeue you will see the JobID of the script ("NNNNNNN"), and if you do:
+
+    cd PRACE-intro-ml
+    ls slurm*
+
+you may also see a new file called "slurm-NNNNNNN.out". Take this file and execute the following:
 
     tail slurm-NNNNNNNN.out
 
