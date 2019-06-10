@@ -29,12 +29,17 @@ Press Enter three times. A key pair will be generated for you in directory .ssh.
     chmod 700 ~/.ssh
     chmod 600 ~/.ssh/authorized_keys
 
-## Submit a job to Cartesius
-
 When the session starts, please submit the following job to Cartesius:
 
     cd PRACE-intro-dl
     sbatch job.jupyter.gpu
+
+The script job.jupyter.gpu is going to prepare the environment for the execution of Jupyter notebooks. This will take a couple minutes, so that it will finish while you are attending the first presentation.
+
+IMPORTANT NOTE: the script job.jupyter.gpu includes a line with the reservation "ptc_course_1", which is valid only for the first day of the course. The script may be used later, but this reservation won't be valid anymore, and therefore this line will need to be changed or removed.
+
+
+## When the hands-on session starts:
 
 Open a new terminal and do the following:
 
@@ -42,17 +47,28 @@ Open a new terminal and do the following:
 
 Note that you need to replace every "XXX" with the three digits of your login name.
    
-Use this command to check your job:
+Use this command to check that your job is running:
 
-   squeue –u $(whoami)
+    squeue –u $(whoami)
    
-To cancel your job:
+After executing squeue you will see the JobID of the script ("NNNNNNN"), and if you do "ls" you may also see a new file called "slurm-NNNNNNN.out". Take this file and execute the following:
 
-   scancel JobID
-   
-If your job is running, you can open your browser and go to localhost:5XXX (replace again XXX with the three digits of your login name). You should be able to see the Jupyter notebook now.
+    tail slurm-NNNNNNNN.out
 
-NOTE: the script job.jupyter.gpu includes a line with the reservation "ptc_course_1", which is valid only for the first day of the course. The script may be used later, but this reservation won't be valid anymore, and therefore will need to be changed or removed.
+If all has run correctly you are going to see a line like this:
+
+    [I 09:46:39.076 NotebookApp] Serving notebooks from local directory: /nfs/home1/ptc001/PRACE-intro-dl
+    [I 09:46:39.077 NotebookApp] The Jupyter Notebook is running at:
+    [I 09:46:39.077 NotebookApp] http://localhost:5001/?token=5cae030bebca6b879468a7a32dc3cd591e4f684f43bdff0b
+    [I 09:46:39.077 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+    [C 09:46:39.089 NotebookApp] 
+    
+        To access the notebook, open this file in a browser:
+            file:///nfs/home1/ptc001/.local/share/jupyter/runtime/nbserver-97612-open.html
+        Or copy and paste one of these URLs:
+            http://localhost:5001/?token=5cae030bebca6b879468a7a32dc3cd591e4f684f43bdff0
+
+Please open a web browser on your laptop and paste in it the last url (http://localhost:5.../?token=...). You should be able to see the Jupyter notebook now.
 
 ## Running the notebooks at home
 
