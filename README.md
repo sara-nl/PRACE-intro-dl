@@ -75,6 +75,8 @@ If all has run correctly you are going to see a line like this:
 
 Please open a web browser on your laptop and paste in it the last url (http://localhost:5.../?token=...). You should be able to see the Jupyter notebook now.
 
+If for some reason you don't see the previous line or find any error, please ask for help.
+
 ## Running the notebooks at home
 
 To run the notebooks locally, please install [Anaconda](https://www.anaconda.com/distribution/).
