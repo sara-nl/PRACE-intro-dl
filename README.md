@@ -53,7 +53,7 @@ Use this command to check that your job is running:
    
 After executing squeue you will see the JobID of the script ("NNNNNNN"), and if you do:
 
-    cd PRACE-intro-ml
+    cd PRACE-intro-dl
     ls slurm*
 
 you may also see a new file called "slurm-NNNNNNN.out". Take this file and execute the following:
