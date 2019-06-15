@@ -4,6 +4,10 @@ For the first session in this course we will use the [Cartesius supercomputer](h
 
 For Windows users, we recommend to connect via ssh using [MobaXterm](https://mobaxterm.mobatek.net/) or, on Windows 10, using the [native bash environment](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)
 
+## Before you connect to Cartesius
+
+Please check your email inbox for a message with your access credentials and follow the instructions to connect to the user portal, so that you can accept the usage agreement and change your password.
+
 ## Connect to Cartesius
 
 To connect to Cartesius, please open a terminal and use the following command:
